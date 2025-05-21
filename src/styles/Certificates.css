@@ -1,0 +1,194 @@
+/* === Certificates Section === */
+.certificates-section {
+  padding: 4rem 2rem;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+  text-align: center;
+}
+
+.cert-heading {
+  font-size: 2.5rem;
+  margin-bottom: 2.5rem;
+  color: var(--primary-color);
+  text-shadow: 0 0 10px var(--hover-glow);
+}
+
+/* === Grid Layout === */
+.certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* === Certificate Card === */
+.certificate-card {
+  background-color: var(--header-bg);
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid var(--hover-glow);
+  box-shadow: 0 0 12px var(--hover-glow), 0 0 18px var(--glow-drop);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform: scale(1); /* default size */
+}
+
+
+.certificate-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px var(--hover-glow), 0 0 35px var(--glow-drop);
+  z-index: 2;
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 0 10px var(--hover-glow), 0 0 20px var(--glow-drop);
+  }
+  50% {
+    box-shadow: 0 0 20px var(--hover-glow), 0 0 40px var(--glow-drop);
+  }
+}
+
+/* === Image Container === */
+.certificate-img-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.certificate-img-container img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.certificate-img-container img:hover {
+  transform: scale(1.05);
+}
+
+/* === Action Buttons === */
+.certificate-actions {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+}
+
+.action-button {
+  background: var(--bg-color);
+  border: 2px solid black;
+  padding: 6px 10px;
+  font-size: 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+.action-button:hover {
+  background-color: var(--primary-hover);
+  box-shadow: 0 0 8px var(--hover-glow);
+  border-color: var(--hover-glow);
+}
+
+/* === Like Button Special === */
+.action-button.like {
+  font-size: 18px;
+}
+
+.action-button.like.liked {
+  color: #ff4081;
+  border-color: #ff4081;
+  box-shadow: 0 0 8px #ff4081;
+}
+
+/* === Certificate Details === */
+.certificate-details {
+  padding: 1rem;
+  text-align: left;
+}
+
+.certificate-details h3 {
+  margin: 0.5rem 0 0.2rem;
+  font-size: 1.2rem;
+  color: var(--primary-color);
+}
+
+.certificate-details p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.certificate-details span {
+  font-size: 0.8rem;
+  color: var(--accent-color);
+}
+
+/* === Toggle Button === */
+.certificates-toggle {
+  margin-top: 2.5rem;
+}
+
+.toggle-button {
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.toggle-button:hover {
+  background: var(--primary-hover);
+}
+
+/* === Fullscreen Overlay === */
+.fullscreen-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(18, 18, 18, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.fullscreen-box {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.fullscreen-box img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 20px var(--primary-color);
+}
+
+/* === Close Button === */
+.close-button {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  font-size: 2rem;
+  color: #fff;
+  background: var(--primary-color);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  box-shadow: 0 0 10px var(--hover-glow);
+}

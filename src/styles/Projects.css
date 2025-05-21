@@ -1,0 +1,172 @@
+.projects-section {
+  padding: 4rem 2rem;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  text-align: center;
+}
+
+.projects-title {
+  font-size: 2.5rem;
+  margin-bottom: 2.5rem;
+  color: var(--primary-color);
+  text-shadow: 0 0 10px var(--hover-glow);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.project-card {
+  background-color: var(--header-bg);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  border: 1px solid transparent;
+  animation: glowPulse 1.8s infinite;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  border: 1px solid var(--hover-glow);
+}
+
+@keyframes glowPulse {
+  0% {
+    box-shadow: 0 0 10px var(--hover-glow), 0 0 20px var(--glow-drop);
+  }
+  50% {
+    box-shadow: 0 0 20px var(--hover-glow), 0 0 40px var(--glow-drop);
+  }
+  100% {
+    box-shadow: 0 0 10px var(--hover-glow), 0 0 20px var(--glow-drop);
+  }
+}
+
+.project-img-container {
+  height: 180px;
+  overflow: hidden;
+}
+
+.project-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project-img:hover {
+  transform: scale(1.05);
+}
+
+.project-info {
+  padding: 1rem;
+  text-align: left;
+}
+
+.project-info h3 {
+  font-size: 1.3rem;
+  margin: 0.5rem 0;
+}
+
+.project-info p {
+  font-size: 0.95rem;
+}
+
+.project-link {
+  color: var(--primary-color);
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 0.4rem;
+}
+
+.project-link:hover {
+  text-shadow: 0 0 6px var(--hover-glow);
+  color: var(--hover-glow);
+}
+
+.rating-like-box {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Stars */
+.rating-stars {
+  display: flex;
+}
+
+.star {
+  font-size: 22px;
+  margin-right: 4px;
+  cursor: pointer;
+  color: #ccc;
+  transition: all 0.3s ease;
+}
+
+.star:hover {
+  transform: scale(1.2);
+}
+
+.star.rated {
+  color: gold;
+  transform: scale(1.4);
+  text-shadow: 0 0 10px gold;
+}
+
+/* Heart Button */
+.heart-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: black;
+  transition: all 0.3s ease;
+  text-shadow: 0 0 0 transparent;
+}
+
+.heart-btn:hover {
+  text-shadow: 0 0 8px #ff4d6d;
+}
+
+.heart-btn.liked {
+  color: #ff4d6d;
+  text-shadow: 0 0 8px #ff4d6d;
+  transform: scale(1.2);
+}
+
+.projects-toggle {
+  margin-top: 2.5rem;
+}
+
+.toggle-button {
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.toggle-button:hover {
+  background: var(--primary-hover);
+}

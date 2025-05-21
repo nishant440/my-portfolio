@@ -1,0 +1,88 @@
+/* === Contact Section === */
+.contact-section {
+  padding: 60px 20px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.contact-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: var(--header-bg);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px var(--shadow-color);
+  transition: background 0.4s ease-in-out, box-shadow 0.4s;
+}
+
+.contact-container:hover {
+  box-shadow: 0 0 30px var(--hover-glow);
+}
+
+.contact-heading {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: var(--primary-color);
+  text-shadow: 0 0 5px var(--hover-glow);
+}
+
+/* === Form === */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px 15px;
+  border: 1px solid var(--primary-color);
+  background: transparent;
+  color: var(--text-color);
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #888;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--hover-glow);
+  box-shadow: 0 0 10px var(--hover-glow);
+}
+
+/* === Submit Button === */
+.contact-form button {
+  background: var(--primary-color);
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.contact-form button:hover {
+  background: var(--primary-hover);
+  transform: scale(1.03);
+  box-shadow: 0 0 10px var(--hover-glow);
+}
+
+/* === Responsive === */
+@media (max-width: 600px) {
+  .contact-container {
+    padding: 20px;
+  }
+
+  .contact-heading {
+    font-size: 2rem;
+  }
+}

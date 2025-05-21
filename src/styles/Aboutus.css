@@ -1,0 +1,139 @@
+/* === VARIABLES (Dark/Light Mode should already be in your global CSS) === */
+:root {
+  --primary-color: #00bcd4;
+  --hover-glow: #00e5ff;
+  --text-color: #d0d6db;
+}
+
+/* === LAYOUT === */
+.about-section {
+  padding: 4rem 2rem;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 3rem;
+}
+
+.about-content {
+  flex: 1;
+}
+
+/* === IMAGE STYLING (Only glow on image border) === */
+.dev-gif {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 20px;
+  border: 3px solid var(--primary-color);
+  box-shadow: 0 0 15px var(--primary-color);
+  animation: imageGlow 2.5s ease-in-out infinite alternate, float 4s ease-in-out infinite;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.dev-gif:hover {
+  transform: scale(1.05);
+  border-color: var(--hover-glow);
+  box-shadow: 0 0 30px var(--hover-glow), 0 0 60px var(--hover-glow);
+}
+
+/* === FLOATING IMAGE ANIMATION === */
+@keyframes float {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes imageGlow {
+  0% {
+    box-shadow: 0 0 15px var(--primary-color);
+  }
+  100% {
+    box-shadow: 0 0 30px var(--hover-glow), 0 0 60px var(--hover-glow);
+  }
+}
+
+/* === TEXT STYLING === */
+.about-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  transition: transform 0.4s ease, text-shadow 0.4s ease;
+}
+
+.about-heading:hover {
+  transform: scale(1.08);
+  text-shadow: 0 0 10px var(--hover-glow), 0 0 25px var(--hover-glow);
+}
+
+.block-heading,
+.contact-heading {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 1.5rem 0 0.8rem;
+  transition: transform 0.4s ease, text-shadow 0.4s ease;
+}
+
+.block-heading:hover,
+.contact-heading:hover {
+  transform: scale(1.05);
+  text-shadow: 0 0 8px var(--hover-glow);
+}
+
+.about-text,
+.interests-text {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.highlight {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.contact-info .contact-list {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-list li {
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+}
+
+.contact-link a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.contact-link a:hover {
+  text-decoration: underline;
+}
+
+/* === RESPONSIVE === */
+@media (min-width: 768px) {
+  .about-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .about-content {
+    padding-right: 2rem;
+  }
+
+  .about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+}
