@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/my-portfolio/static/css/main.7a45b86d.css",
+    "main.js": "/my-portfolio/static/js/main.f0f28cfa.js",
+    "static/media/photo.png": "/my-portfolio/static/media/photo.f97bfb92db4c4b30f2ba.png",
+    "static/media/Certificate3.jpg": "/my-portfolio/static/media/Certificate3.717c3538d8dd7fe86dbc.jpg",
+    "static/media/Certificate2.jpg": "/my-portfolio/static/media/Certificate2.7a4a6aeeca466cb3309c.jpg",
+    "static/media/Certificate4.jpg": "/my-portfolio/static/media/Certificate4.ef44c33a1c8e64623f20.jpg",
+    "static/media/Certificate7.jpg": "/my-portfolio/static/media/Certificate7.bf1061b6cad647fe342e.jpg",
+    "static/media/Certificate8.png": "/my-portfolio/static/media/Certificate8.529226b1f2b9870edf1f.png",
+    "static/media/Certificate6.jpg": "/my-portfolio/static/media/Certificate6.7935c1ed8c5f1ed67e8b.jpg",
+    "static/media/Aboutus.png": "/my-portfolio/static/media/Aboutus.aa30c961b3631e7485c4.png",
+    "static/media/screenshot.png": "/my-portfolio/static/media/screenshot.ffc40404f38392887d5b.png",
+    "static/media/Certificate1.jpg": "/my-portfolio/static/media/Certificate1.24cbc959fe1aac0888f8.jpg",
+    "static/media/css.png": "/my-portfolio/static/media/css.579ebdbca2838f80a9cf.png",
+    "static/media/Certificate5.jpg": "/my-portfolio/static/media/Certificate5.b47a7a4f9dfa147af423.jpg",
+    "static/media/react.png": "/my-portfolio/static/media/react.4127b36258b5e9dc8f88.png",
+    "static/media/js.png": "/my-portfolio/static/media/js.10ccac0eb9dd930b6b6c.png",
+    "static/media/nodejs.png": "/my-portfolio/static/media/nodejs.007e99f68b718e476aba.png",
+    "static/media/git.png": "/my-portfolio/static/media/git.00e5bd772731dbe33649.png",
+    "static/media/python.png": "/my-portfolio/static/media/python.c2f539d50caa3745ce64.png",
+    "static/media/Java.png": "/my-portfolio/static/media/Java.f5dd86c3ef6ef3f85acf.png",
+    "static/media/mongodb.png": "/my-portfolio/static/media/mongodb.bb2414e41e43ae15410c.png",
+    "static/media/html.png": "/my-portfolio/static/media/html.b2db3a7f6897f0a6e75c.png",
+    "index.html": "/my-portfolio/index.html",
+    "main.7a45b86d.css.map": "/my-portfolio/static/css/main.7a45b86d.css.map",
+    "main.f0f28cfa.js.map": "/my-portfolio/static/js/main.f0f28cfa.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7a45b86d.css",
+    "static/js/main.f0f28cfa.js"
+  ]
+}
