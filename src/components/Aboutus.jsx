@@ -1,42 +1,84 @@
 import React from 'react';
 import '../styles/Aboutus.css';
-import devAnimation from '../assets/Animation/Aboutus.png';
 
 const AboutUs = () => {
   return (
     <section id="about" className="about-section">
-      <div className="container">
-        <div className="about-container">
-          <div className="about-content">
-            <h2 className="about-heading">👋𝐇𝐞𝐥𝐥𝐨 𝐓𝐡𝐞𝐫𝐞, 𝐈'𝐦 𝐍𝐢𝐬𝐡𝐚𝐧𝐭 𝐆𝐚𝐮𝐭𝐚𝐦</h2>
-            <p className="about-text">
-              I'm a passionate <span className="highlight">Full-Stack Web Developer</span> from Mathura, UP, currently pursuing my <span className="highlight">BCA at GLA University</span>.
-              I specialize in building beautiful, user-friendly, and performant websites and applications.
-              <br /><br />
-              My curiosity and commitment to learning allow me to adapt quickly to new tools and frameworks.
-            </p>
+      <div className="about-container">
+        <div className="about-left">
+          <h2 className="about-heading">👋 Hello, I'm Nishant Gautam</h2>
 
-            <div className="about-section-block">
-              <h3 className="block-heading">🌟 𝐁𝐞𝐲𝐨𝐧𝐝 𝐭𝐡𝐞 𝐂𝐨𝐝𝐞</h3>
-              <p className="interests-text">
-                When I’m not coding, you’ll find me diving into open-source projects, reading about the latest tech trends,
-                or enjoying a refreshing bike ride. I believe in continuous growth – both professionally and personally.
-              </p>
-            </div>
+          <p className="about-description">
+            I'm a passionate <span className="highlight">Full-Stack Web Developer</span> from Mathura, UP,
+            currently pursuing my <span className="highlight">BCA at GLA University</span>. I specialize in
+            developing user-friendly and high-performance web applications.
+          </p>
 
-            <div className="contact-info">
-              <h3 className="contact-heading">📬 𝐋𝐞𝐭’𝐬 𝐂𝐨𝐧𝐧𝐞𝐜𝐭</h3>
-              <ul className="contact-list">
-                <li>📱 Phone: <span className="contact-link">+91 9368070638</span></li>
-                <li>📧 Email: <span className="contact-link"><a href="mailto:gautamnishant119@gmail.com">gautamnishant119@gmail.com</a></span></li>
-                <li>🔗 LinkedIn: <span className="contact-link"><a href="https://www.linkedin.com/in/nishant-gautam-39b529329/" target="_blank" rel="noopener noreferrer">Nishant Gautam</a></span></li>
-                <li>📸 Instagram: <span className="contact-link"><a href="https://www.instagram.com/_itsme_nishant_/" target="_blank" rel="noopener noreferrer">_itsme_nishant_</a></span></li>
-              </ul>
+          <p className="about-description">
+            My curiosity and dedication to learning new technologies help me build clean, modern, and scalable
+            solutions.
+          </p>
+
+          <div className="section-block">
+            <h3 className="section-title">🚀 Quick Facts</h3>
+            <ul className="facts-list">
+              <li>🎓 Studying BCA at GLA University</li>
+              <li>🌍 Based in Mathura, Uttar Pradesh</li>
+              <li>🧠 Constant learner and problem solver</li>
+              <li>🛠️ Contributor to Open Source Projects</li>
+            </ul>
+          </div>
+
+          <div className="section-block">
+            <h3 className="section-title">💻 Tech Stack</h3>
+            <div className="tech-stack">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>React</span>
+              <span>Node.js</span>
+              <span>Express</span>
+              <span>MongoDB</span>
+              <span>Git</span>
             </div>
           </div>
 
-          <div className="about-image">
-            <img src={devAnimation} alt="Developer at work" className="dev-gif glowing-image" />
+          <div className="section-block">
+            <h3 className="section-title">📬 Let's Connect</h3>
+            <ul className="contact-list">
+              <li>
+                <strong>📱 Phone:</strong>{' '}
+                <span className="contact-link">+91 9368070638</span>
+              </li>
+              <li>
+                <strong>📧 Email:</strong>{' '}
+                <a href="mailto:gautamnishant119@gmail.com" className="contact-link">
+                  gautamnishant119@gmail.com
+                </a>
+              </li>
+              <li>
+                <strong>🔗 LinkedIn:</strong>{' '}
+                <a
+                  href="https://www.linkedin.com/in/nishant-gautam-39b529329/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="contact-link"
+                >
+                  Nishant Gautam
+                </a>
+              </li>
+              <li>
+                <strong>📸 Instagram:</strong>{' '}
+                <a
+                  href="https://www.instagram.com/_itsme_nishant_/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="contact-link"
+                >
+                  _itsme_nishant_
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>

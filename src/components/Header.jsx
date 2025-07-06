@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
-import logo from "../assets/images/screenshot.png"; // Adjust the path
+import logo from "../assets/images/screenshot.png";
 import "../styles/Header.css";
 
 const Header = () => {
@@ -11,15 +11,8 @@ const Header = () => {
 
   useEffect(() => {
     const body = document.body;
-    if (body.classList.contains("dark-mode")) {
-      themeToggleRef.current.textContent = "☀️";
-    } else {
-      themeToggleRef.current.textContent = "🌙";
-    }
+    themeToggleRef.current.textContent = body.classList.contains("dark-mode") ? "☀️" : "🌙";
   }, []);
-
-  const toggleMenu = () => setMenuOpen(!menuOpen);
-  const closeMenu = () => setMenuOpen(false);
 
   const toggleTheme = () => {
     const body = document.body;
@@ -27,6 +20,9 @@ const Header = () => {
     body.classList.toggle("dark-mode");
     themeToggleRef.current.textContent = isLight ? "☀️" : "🌙";
   };
+
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+  const closeMenu = () => setMenuOpen(false);
 
   useEffect(() => {
     const handleOutsideClick = (e) => {
@@ -37,49 +33,10 @@ const Header = () => {
     if (menuOpen) {
       document.addEventListener("click", handleOutsideClick);
     }
-    return () => {
-      document.removeEventListener("click", handleOutsideClick);
-    };
+    return () => document.removeEventListener("click", handleOutsideClick);
   }, [menuOpen]);
 
-  useEffect(() => {
-  let scrolledOnce = false;
-
-  const handleScroll = () => {
-    const currentScroll = window.scrollY;
-    const heroSection = document.getElementById("hero");
-
-    // If hero exists, prevent hiding while inside hero section
-    if (heroSection) {
-      const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
-      if (currentScroll < heroBottom) {
-        setVisible(true);
-        return;
-      }
-    }
-
-    if (!scrolledOnce && currentScroll === 0) {
-      return; // don't hide header before first scroll
-    }
-
-    scrolledOnce = true;
-
-    if (currentScroll > lastScroll.current) {
-      setVisible(false); // scrolling down
-    } else {
-      setVisible(true); // scrolling up
-      clearTimeout(timeoutRef.current);
-      timeoutRef.current = setTimeout(() => {
-        setVisible(false);
-      }, 3000);
-    }
-
-    lastScroll.current = currentScroll;
-  };
-
-  window.addEventListener("scroll", handleScroll);
-  return () => window.removeEventListener("scroll", handleScroll);
-}, []);
+  
 
   return (
     <>
@@ -88,18 +45,18 @@ const Header = () => {
           <div className="header-left">
             <div className="logo">
               <img src={logo} alt="Logo" className="header-logo" />
-              <span className="logo-text">𝕹𝖎𝖘𝖍𝖆𝖓𝖙 𝕲𝖆𝖚𝖙𝖆𝖒</span>
+              <span className="logo-text">𝓝𝓲𝓼𝓱𝓪𝓷𝓽 𝓖𝓪𝓾𝓽𝓪𝓶</span>
             </div>
 
             <button
               className={`hamburger${menuOpen ? " open" : ""}`}
               onClick={toggleMenu}
-              aria-label="Menu"
+              aria-label="Toggle menu"
               aria-expanded={menuOpen}
             >
-              <span />
-              <span />
-              <span />
+              <span></span>
+              <span></span>
+              <span></span>
             </button>
           </div>
 
@@ -118,8 +75,8 @@ const Header = () => {
             <button
               className="theme-toggle"
               ref={themeToggleRef}
-              aria-label="Toggle theme"
               onClick={toggleTheme}
+              aria-label="Toggle theme"
             >
               🌙
             </button>
@@ -130,7 +87,7 @@ const Header = () => {
       <div
         className={`sidebar-overlay${menuOpen ? " open" : ""}`}
         onClick={closeMenu}
-        aria-hidden={menuOpen ? "false" : "true"}
+        aria-hidden={!menuOpen}
       />
 
       <aside className={`sidebar${menuOpen ? " open" : ""}`} role="navigation">

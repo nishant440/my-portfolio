@@ -1,139 +1,126 @@
-/* === VARIABLES (Dark/Light Mode should already be in your global CSS) === */
 :root {
   --primary-color: #00bcd4;
-  --hover-glow: #00e5ff;
+  --hover-color: #00e5ff;
   --text-color: #d0d6db;
+  --bg-color: #0e0e10;
+  --font-family: 'Segoe UI', sans-serif;
 }
 
-/* === LAYOUT === */
 .about-section {
-  padding: 4rem 2rem;
   background-color: var(--bg-color);
   color: var(--text-color);
-}
-
-.container {
-  max-width: 1200px;
-  margin: auto;
+  padding: 5rem 2rem;
+  font-family: var(--font-family);
 }
 
 .about-container {
+  max-width: 1100px;
+  margin: 0 auto;
   display: flex;
-  flex-direction: column-reverse;
-  align-items: center;
-  gap: 3rem;
+  flex-direction: column;
+  gap: 2.5rem;
 }
 
-.about-content {
-  flex: 1;
-}
-
-/* === IMAGE STYLING (Only glow on image border) === */
-.dev-gif {
+.about-left {
   width: 100%;
-  max-width: 400px;
-  border-radius: 20px;
-  border: 3px solid var(--primary-color);
-  box-shadow: 0 0 15px var(--primary-color);
-  animation: imageGlow 2.5s ease-in-out infinite alternate, float 4s ease-in-out infinite;
-  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
 }
 
-.dev-gif:hover {
-  transform: scale(1.05);
-  border-color: var(--hover-glow);
-  box-shadow: 0 0 30px var(--hover-glow), 0 0 60px var(--hover-glow);
-}
-
-/* === FLOATING IMAGE ANIMATION === */
-@keyframes float {
-  0%   { transform: translateY(0); }
-  50%  { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
-}
-
-@keyframes imageGlow {
-  0% {
-    box-shadow: 0 0 15px var(--primary-color);
-  }
-  100% {
-    box-shadow: 0 0 30px var(--hover-glow), 0 0 60px var(--hover-glow);
-  }
-}
-
-/* === TEXT STYLING === */
 .about-heading {
-  font-size: 2.5rem;
-  font-weight: bold;
+  font-size: 2.8rem;
+  color: var(--primary-color);
   margin-bottom: 1rem;
-  transition: transform 0.4s ease, text-shadow 0.4s ease;
+  transition: 0.3s ease-in-out;
 }
 
 .about-heading:hover {
-  transform: scale(1.08);
-  text-shadow: 0 0 10px var(--hover-glow), 0 0 25px var(--hover-glow);
+  transform: scale(1.03);
+  text-shadow: 0 0 10px var(--hover-color);
 }
 
-.block-heading,
-.contact-heading {
-  font-size: 1.8rem;
-  font-weight: bold;
-  margin: 1.5rem 0 0.8rem;
-  transition: transform 0.4s ease, text-shadow 0.4s ease;
-}
-
-.block-heading:hover,
-.contact-heading:hover {
-  transform: scale(1.05);
-  text-shadow: 0 0 8px var(--hover-glow);
-}
-
-.about-text,
-.interests-text {
+.about-description {
   font-size: 1.1rem;
   line-height: 1.7;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.2rem;
 }
 
 .highlight {
-  color: var(--primary-color);
-  font-weight: bold;
+  color: var(--hover-color);
+  font-weight: 600;
 }
 
-.contact-info .contact-list {
+.section-block {
+  margin-top: 2rem;
+}
+
+.section-title {
+  font-size: 1.6rem;
+  color: var(--primary-color);
+  margin-bottom: 0.8rem;
+  transition: 0.3s ease-in-out;
+}
+
+.section-title:hover {
+  transform: scale(1.05);
+  text-shadow: 0 0 8px var(--hover-color);
+}
+
+.facts-list {
   list-style: none;
-  padding: 0;
+  padding-left: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.facts-list li::before {
+  content: "✔️ ";
+  margin-right: 6px;
+  color: var(--primary-color);
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.tech-stack span {
+  background-color: #1f1f22;
+  color: var(--text-color);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  border: 1px solid var(--primary-color);
+  transition: background-color 0.3s ease;
+}
+
+.tech-stack span:hover {
+  background-color: var(--primary-color);
+  color: #000;
+}
+
+.contact-list {
+  list-style: none;
+  padding-left: 0;
+  font-size: 1.05rem;
 }
 
 .contact-list li {
-  margin-bottom: 0.8rem;
-  font-size: 1.1rem;
+  margin-bottom: 0.6rem;
 }
 
-.contact-link a {
+.contact-link {
   color: var(--primary-color);
   text-decoration: none;
 }
 
-.contact-link a:hover {
+.contact-link:hover {
+  color: var(--hover-color);
   text-decoration: underline;
 }
 
-/* === RESPONSIVE === */
+/* Responsive Design */
 @media (min-width: 768px) {
   .about-container {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .about-content {
-    padding-right: 2rem;
-  }
-
-  .about-image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
+    padding: 0 2rem;
   }
 }
